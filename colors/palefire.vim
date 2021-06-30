@@ -2,7 +2,7 @@
 " Author:      Nadim Edde Gomez (nadim@eddegomez.org)
 " Webpage:     https://github.com/Nequo/palefire-nvim
 " Description: Personal colorscheme based on Apprentice's template, with zenburn/palefire colors
-" Last Change: 2021-06-16
+" Last Change: 2021-06-30
 
 hi clear
 if exists("syntax_on")
@@ -65,9 +65,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi SpecialKey ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
     hi Title ctermbg=NONE ctermfg=231 cterm=NONE guibg=NONE guifg=#ffffff gui=NONE
     hi DiffAdd ctermbg=235 ctermfg=108 cterm=reverse guibg=#2E2E2E guifg=#9FCC9F gui=reverse
-    hi DiffChange ctermbg=235 ctermfg=103 cterm=reverse guibg=#2E2E2E guifg=#DC8CC3 gui=reverse
+    hi DiffChange ctermbg=235 ctermfg=182 cterm=reverse guibg=#2E2E2E guifg=#d7afd7 gui=reverse
     hi DiffDelete ctermbg=235 ctermfg=131 cterm=reverse guibg=#2E2E2E guifg=#B37576 gui=reverse
-    hi DiffText ctermbg=235 ctermfg=216 cterm=reverse guibg=#2E2E2E guifg=#ffaf87 gui=reverse
+    hi DiffText ctermbg=235 ctermfg=103 cterm=reverse guibg=#2E2E2E guifg=#DC8CC3 gui=reverse
+    hi diffAdded ctermbg=NONE ctermfg=108 cterm=NONE guibg=NONE guifg=#9FCC9F gui=NONE
     hi IncSearch ctermbg=131 ctermfg=235 cterm=NONE guibg=#B37576 guifg=#2E2E2E gui=NONE
     hi Search ctermbg=229 ctermfg=235 cterm=NONE guibg=#F1E4A8 guifg=#2E2E2E gui=NONE
     hi Directory ctermbg=NONE ctermfg=73 cterm=NONE guibg=NONE guifg=#91E0E4 gui=NONE
@@ -96,6 +97,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi NvimTreeGitNew ctermbg=NONE ctermfg=229 cterm=NONE guibg=NONE guifg=#F1E4A8 gui=NONE
     hi NvimTreeGitStaged ctermbg=NONE ctermfg=65 cterm=NONE guibg=NONE guifg=#8DB98D gui=NONE
     hi NvimTreeGitRenamed ctermbg=NONE ctermfg=216 cterm=NONE guibg=NONE guifg=#ffaf87 gui=NONE
+    hi DiffviewFilePanelPath ctermbg=NONE ctermfg=67 cterm=NONE guibg=NONE guifg=#92C4EC gui=NONE
     hi LspDiagnosticsDefaultError ctermbg=NONE ctermfg=131 cterm=NONE guibg=NONE guifg=#B37576 gui=NONE
     hi LspDiagnosticsDefaultWarning ctermbg=NONE ctermfg=229 cterm=NONE guibg=NONE guifg=#F1E4A8 gui=NONE
     hi LspDiagnosticsDefaultInformation ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
@@ -171,9 +173,10 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi SpecialKey ctermbg=NONE ctermfg=darkgrey cterm=NONE
     hi Title ctermbg=NONE ctermfg=white cterm=NONE
     hi DiffAdd ctermbg=black ctermfg=green cterm=reverse
-    hi DiffChange ctermbg=black ctermfg=darkmagenta cterm=reverse
+    hi DiffChange ctermbg=black ctermfg=magenta cterm=reverse
     hi DiffDelete ctermbg=black ctermfg=darkred cterm=reverse
-    hi DiffText ctermbg=black ctermfg=red cterm=reverse
+    hi DiffText ctermbg=black ctermfg=darkmagenta cterm=reverse
+    hi diffAdded ctermbg=NONE ctermfg=green cterm=NONE
     hi IncSearch ctermbg=darkred ctermfg=black cterm=NONE
     hi Search ctermbg=yellow ctermfg=black cterm=NONE
     hi Directory ctermbg=NONE ctermfg=cyan cterm=NONE
@@ -202,6 +205,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi NvimTreeGitNew ctermbg=NONE ctermfg=yellow cterm=NONE
     hi NvimTreeGitStaged ctermbg=NONE ctermfg=darkgreen cterm=NONE
     hi NvimTreeGitRenamed ctermbg=NONE ctermfg=red cterm=NONE
+    hi DiffviewFilePanelPath ctermbg=NONE ctermfg=darkblue cterm=NONE
     hi LspDiagnosticsDefaultError ctermbg=NONE ctermfg=darkred cterm=NONE
     hi LspDiagnosticsDefaultWarning ctermbg=NONE ctermfg=yellow cterm=NONE
     hi LspDiagnosticsDefaultInformation ctermbg=NONE ctermfg=NONE cterm=NONE
