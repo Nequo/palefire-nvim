@@ -2,7 +2,7 @@
 " Author:      Nadim Edde Gomez (nadim@eddegomez.org)
 " Webpage:     https://github.com/Nequo/palefire-nvim
 " Description: Personal colorscheme based on Apprentice's template, with zenburn/palefire colors
-" Last Change: 2021-06-30
+" Last Change: 2021-12-15
 
 hi clear
 if exists("syntax_on")
@@ -47,7 +47,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi TabLineSel ctermbg=102 ctermfg=235 cterm=NONE guibg=#B9AC72 guifg=#2E2E2E gui=NONE
     hi ToolbarLine ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1E1E1E guifg=NONE gui=NONE
     hi ToolbarButton ctermbg=240 ctermfg=250 cterm=NONE guibg=#585858 guifg=#EAEAD3 gui=NONE
-    hi Cursor ctermbg=242 ctermfg=NONE cterm=NONE guibg=#6c6c6c guifg=NONE gui=NONE
+    hi Cursor ctermbg=grey ctermfg=NONE cterm=reverse guibg=grey guifg=NONE gui=reverse
     hi CursorColumn ctermbg=236 ctermfg=NONE cterm=NONE guibg=#383838 guifg=NONE gui=NONE
     hi CursorLineNr ctermbg=236 ctermfg=73 cterm=NONE guibg=#383838 guifg=#91E0E4 gui=NONE
     hi CursorLine ctermbg=235 ctermfg=NONE cterm=NONE guibg=#2E2E2E guifg=NONE gui=NONE
@@ -98,14 +98,14 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi NvimTreeGitStaged ctermbg=NONE ctermfg=65 cterm=NONE guibg=NONE guifg=#8DB98D gui=NONE
     hi NvimTreeGitRenamed ctermbg=NONE ctermfg=216 cterm=NONE guibg=NONE guifg=#ffaf87 gui=NONE
     hi DiffviewFilePanelPath ctermbg=NONE ctermfg=67 cterm=NONE guibg=NONE guifg=#92C4EC gui=NONE
-    hi LspDiagnosticsDefaultError ctermbg=NONE ctermfg=131 cterm=NONE guibg=NONE guifg=#B37576 gui=NONE
-    hi LspDiagnosticsDefaultWarning ctermbg=NONE ctermfg=229 cterm=NONE guibg=NONE guifg=#F1E4A8 gui=NONE
-    hi LspDiagnosticsDefaultInformation ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
-    hi LspDiagnosticsDefaultHint ctermbg=NONE ctermfg=66 cterm=NONE guibg=NONE guifg=#6CBBBF gui=NONE
-    hi LspDiagnosticsUnderlineError ctermbg=NONE ctermfg=131 cterm=undercurl guibg=NONE guifg=#B37576 gui=undercurl
-    hi LspDiagnosticsUnderlineWarning ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
-    hi LspDiagnosticsUnderlineInformation ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
-    hi LspDiagnosticsUnderlineHint ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
+    hi DiagnosticSignError ctermbg=NONE ctermfg=131 cterm=NONE guibg=NONE guifg=#B37576 gui=NONE
+    hi DiagnosticSignWarning ctermbg=NONE ctermfg=229 cterm=NONE guibg=NONE guifg=#F1E4A8 gui=NONE
+    hi DiagnosticSignInformation ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
+    hi DiagnosticSignHint ctermbg=NONE ctermfg=66 cterm=NONE guibg=NONE guifg=#6CBBBF gui=NONE
+    hi DiagnosticUnderlineError ctermbg=NONE ctermfg=131 cterm=undercurl guibg=NONE guifg=#B37576 gui=undercurl
+    hi DiagnosticUnderlineWarning ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
+    hi DiagnosticUnderlineInformation ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
+    hi DiagnosticUnderlineHint ctermbg=NONE ctermfg=NONE cterm=undercurl guibg=NONE guifg=NONE gui=undercurl
     hi LspTroubleText ctermbg=NONE ctermfg=250 cterm=NONE guibg=NONE guifg=#EAEAD3 gui=NONE
     hi TroubleIndent ctermbg=NONE ctermfg=250 cterm=NONE guibg=NONE guifg=#EAEAD3 gui=NONE
     hi TroubleLocation ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#6c6c6c gui=NONE
@@ -155,7 +155,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi TabLineSel ctermbg=darkyellow ctermfg=black cterm=NONE
     hi ToolbarLine ctermbg=black ctermfg=NONE cterm=NONE
     hi ToolbarButton ctermbg=darkgrey ctermfg=lightgrey cterm=NONE
-    hi Cursor ctermbg=lightgrey ctermfg=NONE cterm=NONE
+    hi Cursor ctermbg=grey ctermfg=NONE cterm=reverse
     hi CursorColumn ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi CursorLineNr ctermbg=darkgrey ctermfg=cyan cterm=NONE
     hi CursorLine ctermbg=black ctermfg=NONE cterm=NONE
@@ -206,14 +206,14 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi NvimTreeGitStaged ctermbg=NONE ctermfg=darkgreen cterm=NONE
     hi NvimTreeGitRenamed ctermbg=NONE ctermfg=red cterm=NONE
     hi DiffviewFilePanelPath ctermbg=NONE ctermfg=darkblue cterm=NONE
-    hi LspDiagnosticsDefaultError ctermbg=NONE ctermfg=darkred cterm=NONE
-    hi LspDiagnosticsDefaultWarning ctermbg=NONE ctermfg=yellow cterm=NONE
-    hi LspDiagnosticsDefaultInformation ctermbg=NONE ctermfg=NONE cterm=NONE
-    hi LspDiagnosticsDefaultHint ctermbg=NONE ctermfg=darkcyan cterm=NONE
-    hi LspDiagnosticsUnderlineError ctermbg=NONE ctermfg=darkred cterm=undercurl
-    hi LspDiagnosticsUnderlineWarning ctermbg=NONE ctermfg=NONE cterm=undercurl
-    hi LspDiagnosticsUnderlineInformation ctermbg=NONE ctermfg=NONE cterm=undercurl
-    hi LspDiagnosticsUnderlineHint ctermbg=NONE ctermfg=NONE cterm=undercurl
+    hi DiagnosticSignError ctermbg=NONE ctermfg=darkred cterm=NONE
+    hi DiagnosticSignWarning ctermbg=NONE ctermfg=yellow cterm=NONE
+    hi DiagnosticSignInformation ctermbg=NONE ctermfg=NONE cterm=NONE
+    hi DiagnosticSignHint ctermbg=NONE ctermfg=darkcyan cterm=NONE
+    hi DiagnosticUnderlineError ctermbg=NONE ctermfg=darkred cterm=undercurl
+    hi DiagnosticUnderlineWarning ctermbg=NONE ctermfg=NONE cterm=undercurl
+    hi DiagnosticUnderlineInformation ctermbg=NONE ctermfg=NONE cterm=undercurl
+    hi DiagnosticUnderlineHint ctermbg=NONE ctermfg=NONE cterm=undercurl
     hi LspTroubleText ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi TroubleIndent ctermbg=NONE ctermfg=lightgrey cterm=NONE
     hi TroubleLocation ctermbg=NONE ctermfg=lightgrey cterm=NONE
