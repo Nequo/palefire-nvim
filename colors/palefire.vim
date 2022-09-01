@@ -2,7 +2,7 @@
 " Author:      Nadim Edde Gomez (nadim@eddegomez.org)
 " Webpage:     https://github.com/Nequo/palefire-nvim
 " Description: Personal colorscheme based on Apprentice's template, with zenburn/palefire colors
-" Last Change: 2021-12-15
+" Last Change: 2022-06-06
 
 hi clear
 if exists("syntax_on")
@@ -13,6 +13,7 @@ let colors_name = "palefire"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=236 ctermfg=250 cterm=NONE guibg=#383838 guifg=#EAEAD3 gui=NONE
+    hi NormalNC ctermbg=235 ctermfg=250 cterm=NONE guibg=#2E2E2E guifg=#EAEAD3 gui=NONE
     hi NonText ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
     hi EndOfBuffer ctermbg=NONE ctermfg=240 cterm=NONE guibg=NONE guifg=#585858 gui=NONE
     hi LineNr ctermbg=238 ctermfg=242 cterm=NONE guibg=#444444 guifg=#6c6c6c gui=NONE
@@ -47,7 +48,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi TabLineSel ctermbg=102 ctermfg=235 cterm=NONE guibg=#B9AC72 guifg=#2E2E2E gui=NONE
     hi ToolbarLine ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1E1E1E guifg=NONE gui=NONE
     hi ToolbarButton ctermbg=240 ctermfg=250 cterm=NONE guibg=#585858 guifg=#EAEAD3 gui=NONE
-    hi Cursor ctermbg=grey ctermfg=NONE cterm=reverse guibg=grey guifg=NONE gui=reverse
+    hi Cursor ctermbg=grey ctermfg=NONE cterm=NONE guibg=grey guifg=NONE gui=NONE
     hi CursorColumn ctermbg=236 ctermfg=NONE cterm=NONE guibg=#383838 guifg=NONE gui=NONE
     hi CursorLineNr ctermbg=236 ctermfg=73 cterm=NONE guibg=#383838 guifg=#91E0E4 gui=NONE
     hi CursorLine ctermbg=235 ctermfg=NONE cterm=NONE guibg=#2E2E2E guifg=NONE gui=NONE
@@ -57,6 +58,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi StatusLineNC ctermbg=238 ctermfg=102 cterm=NONE guibg=#444444 guifg=#B9AC72 gui=NONE
     hi StatusLineTerm ctermbg=102 ctermfg=235 cterm=NONE guibg=#B9AC72 guifg=#2E2E2E gui=NONE
     hi StatusLineTermNC ctermbg=238 ctermfg=102 cterm=NONE guibg=#444444 guifg=#B9AC72 gui=NONE
+    hi WinBar ctermbg=238 ctermfg=102 cterm=NONE guibg=#444444 guifg=#B9AC72 gui=NONE
     hi Visual ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1E1E1E guifg=NONE gui=NONE
     hi VisualNOS ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline
     hi VertSplit ctermbg=NONE ctermfg=238 cterm=NONE guibg=NONE guifg=#444444 gui=NONE
@@ -121,6 +123,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
 
     hi Normal ctermbg=darkgrey ctermfg=lightgrey cterm=NONE
+    hi NormalNC ctermbg=black ctermfg=lightgrey cterm=NONE
     hi NonText ctermbg=NONE ctermfg=darkgrey cterm=NONE
     hi EndOfBuffer ctermbg=NONE ctermfg=darkgrey cterm=NONE
     hi LineNr ctermbg=darkgrey ctermfg=lightgrey cterm=NONE
@@ -155,7 +158,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi TabLineSel ctermbg=darkyellow ctermfg=black cterm=NONE
     hi ToolbarLine ctermbg=black ctermfg=NONE cterm=NONE
     hi ToolbarButton ctermbg=darkgrey ctermfg=lightgrey cterm=NONE
-    hi Cursor ctermbg=grey ctermfg=NONE cterm=reverse
+    hi Cursor ctermbg=grey ctermfg=NONE cterm=NONE
     hi CursorColumn ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi CursorLineNr ctermbg=darkgrey ctermfg=cyan cterm=NONE
     hi CursorLine ctermbg=black ctermfg=NONE cterm=NONE
@@ -165,6 +168,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi StatusLineNC ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
     hi StatusLineTerm ctermbg=darkyellow ctermfg=black cterm=NONE
     hi StatusLineTermNC ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
+    hi WinBar ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
     hi Visual ctermbg=black ctermfg=NONE cterm=NONE
     hi VisualNOS ctermbg=NONE ctermfg=NONE cterm=underline
     hi VertSplit ctermbg=NONE ctermfg=darkgrey cterm=NONE
